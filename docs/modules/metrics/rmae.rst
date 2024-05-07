@@ -9,7 +9,7 @@ While scaled errors do indeed solve the issues of more traditional metrics, they
     3. In ensembles of models with different calibration windows, the :ref:`MASE <mase>` cannot be defined as the calibration window of the ensemble is undefined.
     4. Drawing comparisons across different time series is problematic as electricity prices are not stationary. For example, an in-sample dataset with spikes and an out-of-sample dataset without spikes will lead to a smaller :ref:`MASE <mase>` than if we consider the same market but with the in-sample/out-sample datasets reversed.
 
-To solve these issues, an arguably better metric is the relative MAE (rMAE). Similar to :ref:`MASE <mase>`, rMAE normalizes the :ref:`MAE <mae>` by the :ref:`MAE <mae>` of a naive forecast. However, instead of considering the in-sample dataset, the naive forecast is built based on the out-of-sample dataset. In the context In the context of one-step ahead forecasting is defined as:
+To solve these issues, an arguably better metric is the relative MAE (rMAE). Similar to :ref:`MASE <mase>`, rMAE normalizes the :ref:`MAE <mae>` by the :ref:`MAE <mae>` of a naive forecast. However, instead of considering the in-sample dataset, the naive forecast is built based on the out-of-sample dataset. In the context of one-step ahead forecasting is defined as:
 
 .. math::
 
